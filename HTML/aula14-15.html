@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso HTML - Details/Summary/Datalist</title>
+</head>
+
+<body>
+  <h1>Trabalhando com detail e summary</h1>
+
+  <details open>
+    <summary>Motor 1.6</summary>
+    <p>O carro possui um motor bem equilibrado.</p>
+  </details>
+  <details>
+    <summary>Conforto</summary>
+    <p>O carro possui suspensão macia.</p>
+  </details>
+  <details>
+    <summary>Segurança</summary>
+    <p>O carro possui sintos de três pontas em todos os acentos.</p>
+  </details>
+
+  <h1>Trabalhando com datalist</h1>
+
+  <form>
+    <input list="carros" placeholder="Procurando algum carro?" name="carro">
+    <datalist id="carros">
+      <option value="Fusca">Fusca</option>
+      <option value="Civic">Civic</option>
+      <option value="Corolla">Corolla</option>
+      <option value="Onix">Onix</option>
+      <option value="Gol">Gol</option>
+      <option value="Palio">Palio</option>
+      <option value="HB20">HB20</option>
+    </datalist>
+  </form>
+</body>
+
+</html>
