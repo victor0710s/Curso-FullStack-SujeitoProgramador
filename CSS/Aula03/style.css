@@ -1,0 +1,14 @@
+.primeiro-h1 {
+  color: red;
+  background-color: #000000;
+}
+
+.segundo-h1 {
+  color: rgb(0, 255, 0);
+  background-color: rgba(0, 0, 178, 0.7);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fontes {
+  font-family: 'Roboto', sans-serif;
+}
