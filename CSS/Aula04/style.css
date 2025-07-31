@@ -1,0 +1,16 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-color: black;
+  width: 500px;
+  color: #fff;
+  /**Espaçamento externo da box**/
+  margin: 50px;
+  /**Espaçamento interno da box**/
+  padding-top: 30px;
+  /**Borda do elemento**/
+  border: 5px solid #ff0000;
+  border-radius: 10px;
+}

@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-color: black;
+  width: 500px;
+  color: #fff;
+  margin: auto;
+  padding: 50px;
+  /**Borda do elemento**/
+  border: 5px solid #ff0000;
+  border-radius: 10px;
+}
+
+.social h2 {
+  text-align: center;
+}
+
+.social ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.social li {
+  margin-bottom: 12px;
+}
+
+.social a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.social a:hover {
+  color: #ff0000;
+}
