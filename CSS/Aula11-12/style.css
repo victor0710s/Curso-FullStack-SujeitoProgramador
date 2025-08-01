@@ -1,0 +1,42 @@
+* {
+  /*! RESET NO CSS */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 180vh;
+}
+
+.container {
+  background-color: #121212;
+  height: 500px;
+  margin: 50px;
+
+  /*Ativando flexbox*/
+  display: flex;
+  flex-direction: row;
+}
+
+.area {
+  width: 100px;
+  height: 100px;
+}
+
+.item-1 {
+  background-color: red;
+  flex: 1; /* Faz com que o item ocupe todo o espaço disponível */
+}
+
+.item-2 {
+  background-color: blue;
+  flex: 2;
+}
+
+.item-3 {
+  background-color: green;
+  flex: 1;
+}
