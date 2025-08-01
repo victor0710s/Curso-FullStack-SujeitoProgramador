@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Inicio Header*/
+.nav {
+  background-color: #181818;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 26px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #ddd;
+  padding: 20px;
+}
+
+.nav-list a:hover {
+  color: #fff;
+}
+
+/*Fim Header*/
