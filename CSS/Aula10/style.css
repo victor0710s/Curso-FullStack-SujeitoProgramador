@@ -1,0 +1,60 @@
+* {
+  /*! RESET NO CSS */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 180vh;
+}
+
+.container {
+  background-color: black;
+  width: 500px;
+  color: #fff;
+  margin: auto;
+  padding: 50px;
+  /**Borda do elemento**/
+  border: 5px solid #ff0000;
+  border-radius: 10px;
+}
+
+/*
+  > 1. Static: position padrão, não é necessário definir.
+  > 2. Relative: posição relativa ao elemento original ou posição normal.
+  (top, bottom, left, right)
+  > 3. Absolute: é posicionado em relação ao elemento pai mais próximo que tenha posição relativa.
+  > 4. Fixed: é posicionado em relação à janela de visualização (vh) do navegador, não se move com o scroll.
+  > 5. Sticky: é posicionado em relação a posição do scroll
+*/
+
+.area {
+  position: relative;
+  width: 650px;
+  height: 500px;
+  border: 5px solid #00ff00;
+}
+
+.area-absolute {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 5px solid #0000ff;
+}
+
+.area-fixed {
+  position: fixed;
+  border: 5px solid #ff00ff;
+  bottom: 50px;
+  right: 50px;
+}
+
+header {
+  background-color: cyan;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
