@@ -69,6 +69,11 @@ body {
   border-radius: 4px;
   font-size: 18px;
   font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.call-to-action:hover {
+  transform: scale(1.05);
 }
 
 .main a {
@@ -76,3 +81,33 @@ body {
   color: #181818;
 }
 /*Fim Main*/
+
+/*Inicio About*/
+.about {
+  background-color: #ffffff;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about div {
+  max-width: 50%;
+  padding-right: 40px;
+}
+
+.about img {
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.about div h2 {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+/*Fim About*/
