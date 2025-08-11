@@ -16,6 +16,10 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  /* position: fixed; Funciona porem pode atrapalhar items colados no elemento*/
+  position: sticky;
+  top: 0;
+  z-index: 9; /* Para ficar acima de outros elementos */
 }
 
 .nav-list {
