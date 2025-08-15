@@ -184,3 +184,39 @@ footer a {
   padding-left: 20px;
   display: inline-block;
 }
+
+@media (max-width: 850px) {
+  #container-signup {
+    width: 70%;
+  }
+
+  .right {
+    padding-left: 0;
+  }
+
+  .line {
+    width: 25%;
+  }
+}
+
+@media (max-width: 500px) {
+  #container-signup {
+    width: 90%;
+  }
+
+  input[type="text"], input[type="password"], input[type="submit"] {
+    width: 85%;
+  }
+
+  .message {
+    margin: 10px 20px;
+  }
+
+  .message span {
+    font-size: 15px;
+  }
+
+  .cta-button {
+    width: 85%;
+  }
+}
