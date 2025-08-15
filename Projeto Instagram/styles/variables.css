@@ -1,3 +1,7 @@
 :root {
-  --background: #FAFAFA
+  --bg: #FAFAFA;
+  --white: #FFFFFF;
+  --black: #000000;
+  --btn-primary: #0095f6;
+  --bd-primary: #e6e6e6;
 }
