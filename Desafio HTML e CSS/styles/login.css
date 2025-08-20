@@ -59,13 +59,27 @@ input[type="text"], input[type="password"]{
 input[type="submit"] {
   background-color: var(--btn-primary);
   color: var(--text-secondary);
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   height: 49px;
   font-size: 16px;
   font-weight: bold;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+
+.login-form {
+  position: relative;
+}
+
+.code {
+  height: 57px;
+  width: 92px;
+  position: absolute;
+  right: -47px;
+  bottom: 20px;
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .signup p {
