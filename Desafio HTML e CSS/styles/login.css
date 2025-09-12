@@ -42,8 +42,9 @@ body {
 }
 
 .title {
+  width: 100%;
   font-size: 40px;
-  padding-bottom: 28px;
+  margin-bottom: 28px;
   max-width: 500px;
 }
 
@@ -53,6 +54,7 @@ form {
   flex-direction: column;
   width: 100%;
   max-width: 500px;
+  z-index: 9;
 }
 
 input[type="text"], input[type="password"]{
@@ -70,7 +72,7 @@ input[type="text"], input[type="password"]{
 input[type="submit"] {
   background-color: var(--btn-primary);
   color: var(--text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 18px;
   height: 45px;
   font-size: 16px;
   font-weight: bold;
@@ -78,7 +80,7 @@ input[type="submit"] {
   border: none;
   cursor: pointer;
   width: 100%;
-  /* min-width: 100%; */
+  min-width: 100%;
 }
 
 /* .login-form {
@@ -90,14 +92,19 @@ form::before{
   content: '';
   position: absolute;
   background-image: url('../assets/code.svg');
-  background-size: 90px;
+  background-size: 80px;
   background-repeat: no-repeat;
   z-index: 1;
   width: 90px;
   height: 90px;
   opacity: 0.3;
-  bottom: -50px;
-  right: -35px;
+  bottom: -55px;
+  right: -45px;
+}
+
+.signup {
+  width: 100%;
+  max-width: 500px;
 }
 
 .signup p {
@@ -118,28 +125,31 @@ form::before{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 24px;
 }
 
 .right img {
   width: 100%;
+  height: auto;
   max-width: 400px;
-  margin-bottom: 50px;
+  margin-bottom: 18px;
 }
 
 .info {
   color: var(--text-secondary);
-  width: 55%;
+  /* width: 55%; */
   margin-bottom: 20px;
 }
 
 .title-info {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bold;
+  max-width: 450px;
 }
 
 .text {
   line-height: 150%;
-  font-size: 18px;
+  max-width: 450px;
 }
 
 @media (max-width: 700px) {
@@ -150,17 +160,35 @@ form::before{
 
   .left {
     width: 85%;
-    padding: 24px 0;
+    padding: 30px 0;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 18px;
   }
   
+  .right {
+    width: 100%;
+    padding: 32px 0;
+  }
 }
 
 @media (max-width: 500px) {
+  .right img {
+    width: 80%;
+  }
+
   .title-info {
     font-size: 32px;
+    margin-bottom: 18px;
+    max-width: 400px;
+    padding: 0 14px;
+    text-align: center;
   }
 
   .text {
-    font-size: 14px;
+    max-width: 400px;
+    padding: 0 14px;
   }
 }
