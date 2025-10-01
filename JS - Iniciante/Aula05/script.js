@@ -23,3 +23,16 @@ function sair () {
   alert("Até mais!");
   area.innerHTML = "Você saiu!"
 }
+
+
+function mediaAluno(nota1, nota2) {
+  var media = (nota1 + nota2) / 2;
+  
+  if (media >= 7) {
+    return `Aprovado com média ${media}`;
+  } else if (media >= 5) {
+    return `Recuperação com média ${media}`;
+  } else {
+    return `Reprovado com média ${media}`;
+  }
+}
