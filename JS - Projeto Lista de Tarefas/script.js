@@ -2,7 +2,7 @@ let listElement = document.querySelector('#app ul'); // Seleciona o elemento <ul
 let inputElement = document.querySelector('#app input'); 
 let buttonElement = document.querySelector('#app button');
 
-let tarefas = []; // Array para armazenar as tarefas
+let tarefas = JSON.parse(localStorage.getItem("@listaTarefas")) || []; // Array para armazenar as tarefas
 
 function renderTarefas() {
   listElement.innerHTML = ''; // Limpa a lista antes de renderizar novamente
@@ -27,6 +27,7 @@ function renderTarefas() {
   })
 }
 
+renderTarefas(); // Se tiver alguma tarefa no localStorage, estas sao exibidas na pagina
 
 function adicionarTarefa() {
   if (inputElement.value === '') {
@@ -37,6 +38,7 @@ function adicionarTarefa() {
     tarefas.push(novaTarefa); // Adiciona a nova tarefa ao array
     inputElement.value = ''; // Limpa o campo de input
     renderTarefas(); // Chama a função para renderizar a lista atualizada
+    salvarTarefas();
   }
 }
 
@@ -45,5 +47,10 @@ buttonElement.onclick = adicionarTarefa; // Adiciona um evento de clique ao bot�
 function deletarTarefa(posicao) {
   tarefas.splice(posicao, 1); // Remove a tarefa do array com base na posição
   renderTarefas(); // Chama a função para renderizar a lista atualizada
+  salvarTarefas();
   alert('Tarefa excluída com sucesso!');
+}
+
+function salvarTarefas() {
+  localStorage.setItem("@listaTarefas", JSON.stringify(tarefas))
 }
