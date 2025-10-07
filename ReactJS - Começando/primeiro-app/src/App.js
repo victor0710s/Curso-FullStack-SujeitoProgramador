@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Criando um componente
 function App() {
@@ -7,6 +7,20 @@ function App() {
     'Estudar React',
     'Pagar contas'
   ]);
+
+  // Carregar as tarefas salvas no localStorage
+  useEffect( () => {
+    const tarefasStorage = localStorage.getItem('@tarefa');
+
+    if (tarefasStorage) {
+      setTarefas(JSON.parse(tarefasStorage));
+    }
+  }, []);
+
+  // Toda vez que o array de tarefas mudar, ele vai disparar esse useEffect
+  useEffect( () => {
+    localStorage.setItem('@tarefa', JSON.stringify(tarefas));
+  }, [tarefas]);
 
   function handleRegister(e) {
     e.preventDefault(); // Previnir o comportamento padrão do formulário
@@ -33,8 +47,8 @@ function App() {
       <br /><br />
 
       <ul>
-        {tarefas.map( tarefa => (
-          <li key={tarefa}>{tarefa}</li>
+        {tarefas.map((tarefa, index) => (
+          <li key={index}>{tarefa}</li>
         ))} 
       </ul>
     </div>
