@@ -1,25 +1,61 @@
 import { useState } from 'react';
 
-import Nome from './components/Nome';
-
 // Criando um componente
 function App() {
-  const [aluno, setAluno] = useState("Victor Silva");
 
-  function handleChangeName(nome) {
-    setAluno(nome);
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [idade, setIdade] = useState('');
+
+  const [user, setUser] = useState({});
+
+  function handleRegister(e) {
+    e.preventDefault(); // Previnir o comportamento padrão do formulário
+
+    alert("Usuario cadastrado com sucesso!");
+    setUser({
+      nome: nome,
+      email: email,
+      idade: idade
+    });
   }
 
   return( //retornando o JSX
     <div>
-      <h1>Compontente</h1><br></br>
-      <h2>Olá {aluno}</h2>
-      <button onClick={() => handleChangeName("Fulano de Tal")}> {/* Usa a arrow functions para chamar a funcão passando um param */}
-        Mudar nome
-      </button>
-      <br></br>
-      <br></br>
-      <Nome aluno="Lucas" idade={25}/> {/* Componente com props (propriedades) */}
+      <h1>Cadastro de usuario</h1>
+
+      <form onSubmit={handleRegister}>
+        <label>Nome: </label><br />
+        <input 
+          placeholder='Digite seu nome'
+          value={nome} // Valor recebido no input
+          onChange={ (e) => setNome(e.target.value)}  // Função disparada quando o valor do input mudar
+        /><br />
+
+        <label>Email: </label><br />
+        <input 
+          placeholder='Digite seu email' 
+          value={email} // Valor recebido no input
+          onChange={ (e) => setEmail(e.target.value)}
+        /><br />
+
+        <label>Idade: </label><br />
+        <input
+          placeholder='Digite sua idade' 
+          value={idade} // Valor recebido no input
+          onChange={ (e) => setIdade(e.target.value)}
+        /><br />
+
+        <button type='submit'>Registrar</button>
+      </form> 
+
+      <br /><br />
+
+      <div>
+        <span>Bem vindo: {user.nome}</span><br />
+        <span>Email: {user.email}</span><br />
+        <span>Idade: {user.idade}</span><br />
+      </div>
     </div>
   );
 }
