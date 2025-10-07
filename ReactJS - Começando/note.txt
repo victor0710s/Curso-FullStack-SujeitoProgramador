@@ -1,0 +1,7 @@
+https://react.dev/learn
+
+criar novo projeto: npx create-react-app "nome-do-projeto"
+
+este comando cria um diretorio para seu projeto e não o arquivo react em si
+
+!!Não usar acentos e espaços no nome do projeto
