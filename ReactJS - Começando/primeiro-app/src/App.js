@@ -1,8 +1,11 @@
+import Nome from './components/Nome';
 
+// Criando um componente
 function App() {
-  return (
-    <div className="App">
-      <h1>Bem vindo ao meu projeto</h1>
+  return( //retornando o JSX
+    <div>
+      <h1>Compontente</h1>
+      <Nome aluno="Lucas" idade={25}/> {/* Componente com props (propriedades) */}
     </div>
   );
 }
