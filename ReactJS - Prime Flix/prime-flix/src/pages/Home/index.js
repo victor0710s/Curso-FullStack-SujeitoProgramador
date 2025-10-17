@@ -8,6 +8,7 @@ import './home.css';
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => { // acontece sempre que carrega a pagina
 
@@ -20,11 +21,20 @@ function Home() {
         }
       })
       setFilmes(response.data.results.slice(0, 10)); // pega os 10 primeiros filmes listados inserindo no filmes
+      setLoading(false);
     }
 
     loadFilmes();
 
   }, [])
+
+  if (loading) {
+    return(
+      <div className="loading">
+        <h2>Carregando os filmes...</h2>
+      </div>
+    )
+  }
 
   return(
     <div className='container'>
