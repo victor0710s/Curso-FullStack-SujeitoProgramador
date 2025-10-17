@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify'
 
 import api from '../../services/api';
 
@@ -26,6 +27,7 @@ function Filme() {
       })
       .catch(() => {
         navigate("/", { replace: true})
+        toast.error("Filme não encontrado!")
         return;
       });
     };
@@ -46,13 +48,13 @@ function Filme() {
     const hasFilme = filmesSalvos.some( (filmesSalvos) => filmesSalvos.id === filme.id);
 
     if (hasFilme) {
-      alert("Esse filme já está na sua lista!");
+      toast.warn("Esse filme já está na sua lista!");
       return;
     }
 
     filmesSalvos.push(filme);
     localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
-    alert("Filme salvo com sucesso!");
+    toast.success("Filme salvo com sucesso!");
 
   }
 
